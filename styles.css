@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: url('cloths.jpg') center center;
@@ -14,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container {
@@ -28,7 +32,7 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 30px;
-    padding: 40px 30px;
+    padding: 30px 25px 25px 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
@@ -45,10 +49,10 @@ body {
     right: 0;
     bottom: 0;
     background-image: url('logo.jpeg');
-    background-size: 100px 100px;
+    background-size: 80px 80px;
     background-repeat: repeat;
     background-position: center;
-    opacity: 0.08;
+    opacity: 0.05;
     z-index: 0;
     pointer-events: none;
 }
@@ -77,44 +81,42 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 10;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
-    padding: 3px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    object-fit: contain;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
     object-position: center;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Business Info */
 .business-name {
     text-align: center;
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 300;
-    letter-spacing: 3px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-bottom: 8px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .registration-number {
     text-align: center;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -130,8 +132,8 @@ body {
 .link-item {
     display: flex;
     align-items: center;
-    padding: 18px 20px;
-    margin-bottom: 12px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -160,8 +162,8 @@ body {
 
 /* Link Icon */
 .link-icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
@@ -169,13 +171,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    margin-right: 14px;
     flex-shrink: 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .link-icon i {
-    font-size: 18px;
+    font-size: 17px;
     color: #333;
 }
 
@@ -187,14 +189,14 @@ body {
 }
 
 .link-label {
-    font-size: 12px;
+    font-size: 11px;
     color: rgba(51, 51, 51, 0.7);
     margin-bottom: 2px;
     font-weight: 400;
 }
 
 .link-name {
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
     font-weight: 600;
     text-transform: uppercase;
@@ -203,21 +205,21 @@ body {
 
 /* Created By Section */
 .created-by {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
 }
 
 .created-text {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 300;
     letter-spacing: 0.5px;
 }
 
 .creator-link {
-    color: rgba(0, 0, 0, 0.95);
+    color: #000;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -244,26 +246,42 @@ body {
     width: 100%;
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 480px) {
+    body {
+        padding: 8px;
+        align-items: flex-start;
+        padding-top: 15px;
+    }
+
     .card {
-        padding: 30px 20px;
+        padding: 25px 20px 20px 20px;
         border-radius: 25px;
+        max-height: 95vh;
+        overflow-y: auto;
     }
 
     .logo {
-        width: 120px;
-        height: 120px;
-        padding: 3px;
+        width: 110px;
+        height: 110px;
+        padding: 6px;
+        border-width: 2px;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
     }
 
     .business-name {
-        font-size: 24px;
-        letter-spacing: 2px;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        margin-top: 10px;
+        margin-bottom: 6px;
     }
 
     .registration-number {
-        font-size: 12px;
+        font-size: 11px;
+        margin-bottom: 18px;
     }
 
     .links-container {
@@ -272,36 +290,174 @@ body {
     }
 
     .link-item {
-        padding: 15px;
+        padding: 12px 15px;
         border-radius: 12px;
+        margin-bottom: 8px;
     }
 
     .link-icon {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
+        margin-right: 12px;
     }
 
     .link-icon i {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .link-label {
+        font-size: 10px;
     }
 
     .link-name {
-        font-size: 15px;
+        font-size: 13px;
+    }
+
+    .created-by {
+        margin-top: 15px;
+        padding-top: 12px;
+    }
+
+    .created-text {
+        font-size: 10px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+    body {
+        padding: 5px;
+        padding-top: 10px;
+    }
+
+    .card {
+        padding: 20px 15px 15px 15px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+
+    .logo-container {
+        margin-bottom: 12px;
+    }
+
+    .business-name {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-top: 8px;
+    }
+
+    .registration-number {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .link-item {
+        padding: 10px 12px;
+        margin-bottom: 7px;
+    }
+
+    .link-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .link-icon i {
+        font-size: 14px;
+    }
+
+    .link-label {
+        font-size: 9px;
+    }
+
+    .link-name {
+        font-size: 12px;
+    }
+
+    .created-by {
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+
+    .created-text {
+        font-size: 9px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        max-width: 450px;
+    }
+
+    .card {
+        padding: 35px 28px;
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 450px;
+    }
+
+    .card {
+        padding: 40px 30px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .business-name {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .registration-number {
+        font-size: 14px;
+    }
+
+    .link-item {
+        padding: 18px 20px;
+        margin-bottom: 12px;
+    }
+
+    .link-icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 15px;
+    }
+
+    .link-icon i {
+        font-size: 18px;
+    }
+
+    .link-name {
+        font-size: 16px;
     }
 
     .created-by {
         margin-top: 25px;
-        padding-top: 15px;
+        padding-top: 18px;
     }
 
     .created-text {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 450px;
+        font-size: 13px;
     }
 }
 
@@ -317,5 +473,18 @@ body {
     .card {
         max-width: 450px;
         margin: 0 auto;
+    }
+}
+
+/* Landscape mobile fix */
+@media (max-height: 700px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+
+    .card {
+        max-height: 90vh;
+        overflow-y: auto;
     }
 }
