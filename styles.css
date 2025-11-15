@@ -87,9 +87,10 @@ body {
     height: 150px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.25);
-    padding: 10px;
+    padding: 3px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     object-fit: contain;
+    object-position: center;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -200,6 +201,49 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Created By Section */
+.created-by {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.created-text {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.creator-link {
+    color: rgba(0, 0, 0, 0.95);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.creator-link:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.creator-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.creator-link:hover::after {
+    width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
     .card {
@@ -210,6 +254,7 @@ body {
     .logo {
         width: 120px;
         height: 120px;
+        padding: 3px;
     }
 
     .business-name {
@@ -242,6 +287,15 @@ body {
 
     .link-name {
         font-size: 15px;
+    }
+
+    .created-by {
+        margin-top: 25px;
+        padding-top: 15px;
+    }
+
+    .created-text {
+        font-size: 12px;
     }
 }
 
