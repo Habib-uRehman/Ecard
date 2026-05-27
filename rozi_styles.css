@@ -48,7 +48,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('rozi_logo.jpeg');
+    background-image: url('rozi_logo.png');
     background-size: 80px 80px;
     background-repeat: repeat;
     background-position: center;
@@ -87,13 +87,14 @@ body {
 }
 
 .logo {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 12px;
     background: white;
-    padding: 8px;
+    padding: 4px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border: 3px solid rgba(255, 255, 255, 0.5);
 }
@@ -262,9 +263,8 @@ body {
     }
 
     .logo {
-        width: 110px;
-        height: 110px;
-        padding: 6px;
+        max-width: 220px;
+        padding: 4px;
         border-width: 2px;
     }
 
@@ -335,9 +335,8 @@ body {
     }
 
     .logo {
-        width: 100px;
-        height: 100px;
-        padding: 5px;
+        max-width: 200px;
+        padding: 4px;
     }
 
     .logo-container {
@@ -399,8 +398,7 @@ body {
     }
 
     .logo {
-        width: 140px;
-        height: 140px;
+        max-width: 280px;
     }
 }
 
@@ -419,8 +417,7 @@ body {
     }
 
     .logo {
-        width: 150px;
-        height: 150px;
+        max-width: 300px;
     }
 
     .business-name {
